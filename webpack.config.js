@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -9,16 +10,19 @@ const PATHS = {
 
 module.exports = {
   mode: 'development',
-  entry: PATHS.source + '/index.js',
+  entry: {
+    app: PATHS.source + '/index.js'
+  },
   output: {
     path: PATHS.build,
     filename: 'main.js'
   },
   devServer: {
     contentBase: PATHS.build,
-    // compress: true,
-    // port: 9002,
-    // lazy: true
+    compress: true,
+    port: 9002,
+    hot: true
+      // lazy: true
   },
   module: {
     rules: [{
@@ -32,10 +36,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -57,9 +58,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ['file-loader']
       }
     ]
   },
@@ -70,6 +69,7 @@ module.exports = {
       template: PATHS.source + '/index.pug',
       inject: true
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

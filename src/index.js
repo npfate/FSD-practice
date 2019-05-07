@@ -1,12 +1,12 @@
 // import ''
-import './style.css';
+// import './style.css';
 
-function component() {
-  const element = document.createElement('div');
-  const myPicture = new Image();
-  myPicture.src = picture;
-  element.appendChild(myPicture);
-  return element;
-}
+// function component() {
+//   const element = document.createElement('div');
+//   const myPicture = new Image();
+//   myPicture.src = picture;
+//   element.appendChild(myPicture);
+//   return element;
+// }
 
-document.body.appendChild(component());
+// document.body.appendChild(component());
