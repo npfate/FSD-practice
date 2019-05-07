@@ -15,8 +15,9 @@ module.exports = {
   },
   output: {
     path: PATHS.build,
-    filename: 'main.js'
+    filename: '[name].bundle.js'
   },
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: PATHS.build,
     compress: true,
@@ -46,11 +47,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               // https://github.com/tcoopman/image-webpack-loader
-              // mozjpeg: {},
-              // optipng: {},
-              // pngquant: {},
-              // gifsicle: {},
-              // webp: {}
+              // mozjpeg: {}, optipng: {}, pngquant: {}, gifsicle: {}, webp: {}             
               diasble: true
             }
           }
