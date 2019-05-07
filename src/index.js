@@ -1,5 +1,4 @@
 // import ''
-import picture from './1.png';
 import './style.css';
 
 function component() {

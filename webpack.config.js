@@ -1,5 +1,6 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -7,10 +8,17 @@ const PATHS = {
 };
 
 module.exports = {
+  mode: 'development',
   entry: PATHS.source + '/index.js',
   output: {
     path: PATHS.build,
     filename: 'main.js'
+  },
+  devServer: {
+    contentBase: PATHS.build,
+    // compress: true,
+    // port: 9002,
+    // lazy: true
   },
   module: {
     rules: [{
@@ -57,9 +65,11 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
+      title: 'FSD 2nd Task',
       filename: 'index.html',
       template: PATHS.source + '/index.pug',
       inject: true
-    })
+    }),
+    new CleanWebpackPlugin()
   ]
 };
