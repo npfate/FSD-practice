@@ -1,0 +1,27 @@
+{
+  "name": "FSD-practice",
+  "version": "1.0.0",
+  "description": "Добавить сюда ссылку на Github Pages",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.2",
+    "webpack": "^4.30.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npfate/FSD-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npfate/FSD-practice/issues"
+  },
+  "homepage": "https://github.com/npfate/FSD-practice#readme"
+}
