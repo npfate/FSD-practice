@@ -28,6 +28,30 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              // https://github.com/tcoopman/image-webpack-loader
+              // mozjpeg: {},
+              // optipng: {},
+              // pngquant: {},
+              // gifsicle: {},
+              // webp: {}
+              diasble: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
