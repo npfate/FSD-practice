@@ -1,3 +1,4 @@
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const PATHS = {
@@ -10,5 +11,31 @@ module.exports = {
   output: {
     path: PATHS.build,
     filename: 'main.js'
-  }
+  },
+  module: {
+    rules: [{
+        test: /\.pug$/,
+        use: [{
+          loader: 'pug-loader',
+          options: {
+            pretty: true
+          }
+        }]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: 'index.html',
+      template: PATHS.source + '/index.pug',
+      inject: true
+    })
+  ]
 };
