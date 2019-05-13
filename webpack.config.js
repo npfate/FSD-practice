@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebPackNotifierPlugin = require('webpack-notifier');
 const webpack = require('webpack');
 
 const PATHS = {
@@ -17,6 +18,12 @@ module.exports = {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
+  // optimization: {
+  // // https: //webpack.js.org/guides/code-splitting
+  //   splitChunks: {
+  //     chunks: 'all'
+  //   }
+  // },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: PATHS.build,
@@ -38,6 +45,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'sass-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -67,6 +78,9 @@ module.exports = {
       inject: true
     }),
     new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new WebPackNotifierPlugin({
+      title: 'FSD 2nd Task Notifier'
+    })
   ]
 };
