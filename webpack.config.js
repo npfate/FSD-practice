@@ -1,8 +1,9 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebPackNotifierPlugin = require('webpack-notifier');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -12,7 +13,7 @@ const PATHS = {
 module.exports = {
   mode: 'development',
   entry: {
-    app: PATHS.source + '/index.js'
+    app: PATHS.source + '/app.js'
   },
   output: {
     path: PATHS.build,
@@ -29,7 +30,8 @@ module.exports = {
     contentBase: PATHS.build,
     compress: true,
     port: 9002,
-    hot: true
+    hot: true,
+    overlay: true
       // lazy: true
   },
   module: {
@@ -43,22 +45,46 @@ module.exports = {
         }]
       },
       {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader'
+        }]
+      },
+      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader',
+        use: [{
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images',
+              useRelativePath: true
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {
               // https://github.com/tcoopman/image-webpack-loader
-              // mozjpeg: {}, optipng: {}, pngquant: {}, gifsicle: {}, webp: {}             
+              // mozjpeg: {}, optipng: {}, pngquant: {}, gifsicle: {}, webp: {}
+              mozjpeg: {
+                progressive: true,
+                quality: 90
+              },
               diasble: true
             }
           }
@@ -66,12 +92,19 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts',
+            useRelativePath: true
+          }
+        }]
       }
     ]
   },
   plugins: [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       title: 'FSD 2nd Task',
       filename: 'index.html',
       template: PATHS.source + '/index.pug',
@@ -81,6 +114,9 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new WebPackNotifierPlugin({
       title: 'FSD 2nd Task Notifier'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css"
     })
   ]
 };
