@@ -1,35 +1,27 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('../misc/fonts/Montserrat-Bold.woff') format('woff');
+  src: url('./fonts/Montserrat-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../misc/fonts/Montserrat-Regular.woff') format('woff');
+  src: url('./fonts/Montserrat-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('../misc/fonts/Quicksand-Bold.woff') format('woff');
+  src: url('./fonts/Quicksand-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('../misc/fonts/Quicksand-Regular.woff');
+  src: url('./fonts/Quicksand-Regular.woff');
   font-weight: 400;
   font-style: normal;
-}
-
-.hello {
-  color: red;
-}
-
-body {
-  background-image: url(../misc/images/background.jpg);
 }
