@@ -32,6 +32,7 @@ module.exports = {
     port: 9002,
     hot: true,
     overlay: true
+      // stats: 'errors-only'
       // lazy: true
   },
   module: {
