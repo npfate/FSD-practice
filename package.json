@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Добавить сюда ссылку на Github Pages",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",

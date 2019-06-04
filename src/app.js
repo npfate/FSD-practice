@@ -1,4 +1,3 @@
-console.log("Hello world!");
-
+import 'normalize.css';
+import './app.scss';
 import './index.pug';
-import './misc/fonts.scss';

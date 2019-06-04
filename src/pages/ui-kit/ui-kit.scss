@@ -1,0 +1,12 @@
+.colors-and-type {
+  margin: 150px 0 0 150px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 400px auto;
+  grid-template-rows: 70px;
+}
+
+.colors-list {
+  display: grid;
+  grid-gap: 20px;
+}

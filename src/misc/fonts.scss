@@ -1,27 +1,61 @@
+@import '../styles/colors';
 @font-face {
   font-family: 'Montserrat';
-  src: url('./fonts/Montserrat-Bold.woff') format('woff');
+  src: url('./misc/fonts/Montserrat-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('./fonts/Montserrat-Regular.woff') format('woff');
+  src: url('./misc/fonts/Montserrat-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('./fonts/Quicksand-Bold.woff') format('woff');
+  src: url('./misc/fonts/Quicksand-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('./fonts/Quicksand-Regular.woff');
+  src: url('./misc/fonts/Quicksand-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+}
+
+body {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkshade-75;
+}
+
+h1 {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $darkshade-100;
+}
+
+h2 {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: $darkshade-100;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $darkshade-100;
 }

@@ -1,0 +1,53 @@
+@import '../styles/colors';
+.block-color {
+  display: flex;
+}
+
+.block-color__instance {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+
+.block-color__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.block-color__title {
+  margin: 0;
+}
+
+.block-color__hex {
+  margin: 0;
+}
+
+.block-color--dark100 {
+  background-color: $darkshade-100;
+}
+
+.block-color--dark75 {
+  background-color: $darkshade-75;
+}
+
+.block-color--dark50 {
+  background-color: $darkshade-50;
+}
+
+.block-color--dark25 {
+  background-color: $darkshade-25;
+}
+
+.block-color--dark5 {
+  background-color: $darkshade-5;
+}
+
+.block-color--purple {
+  background-color: $purple;
+}
+
+.block-color--green {
+  background-color: $green;
+}
