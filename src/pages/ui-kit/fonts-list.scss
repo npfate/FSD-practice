@@ -1,0 +1,53 @@
+.fonts-list-block {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-gap: 50px 30px;
+  &__title {
+    text-align: right;
+    color: $darkshade-25;
+    &--h1 {
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &--h2 {
+      text-transform: uppercase;
+      font-size: 19px;
+      line-height: 23px;
+    }
+    &--h3 {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &--body {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__text {
+    color: $darkshade-100;
+    &--h1 {
+      font-family: Quicksand;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    &--h2 {
+      font-family: Quicksand;
+      font-size: 19px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+    &--h3 {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &--body {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

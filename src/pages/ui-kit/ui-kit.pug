@@ -1,14 +1,18 @@
-include ../../templates/_colors-blocks
+include colors-blocks
+include fonts-list
 
 block colors-and-type
   section.colors-and-type
-    .container
-      .colors-list
-        +block-color('dark100', 'Dark Shade 100%', '#1F2041')
-        +block-color('dark75', 'Dark Shade 75%', '#1F2041')
-        +block-color('dark50', 'Dark Shade 50%', '#1F2041')
-        +block-color('dark25', 'Dark Shade 25%', '#1F2041')
-        +block-color('dark5', 'Dark Shade 5%', '#1F2041')
-        +block-color('purple', 'Purple', '#BC9CFF')
-        +block-color('green', 'Green', '#6FCF97')
-      .fonts-list
+    article.colors-list
+      +block-color('dark100', 'Dark Shade 100%', '#1F2041')
+      +block-color('dark75', 'Dark Shade 75%', '#1F2041')
+      +block-color('dark50', 'Dark Shade 50%', '#1F2041')
+      +block-color('dark25', 'Dark Shade 25%', '#1F2041')
+      +block-color('dark5', 'Dark Shade 5%', '#1F2041')
+      +block-color('purple', 'Purple', '#BC9CFF')
+      +block-color('green', 'Green', '#6FCF97')
+    article.fonts-list
+      +fonts-list-block('fonts-list-block__title--h1', 'fonts-list-block__text--h1', 'h1', 'This is the sub-section or widget title')
+      +fonts-list-block('fonts-list-block__title--h2', 'fonts-list-block__text--h2', 'h2', 'Next one is the item title inside widgets')
+      +fonts-list-block('fonts-list-block__title--h3', 'fonts-list-block__text--h3', 'h3', 'This is a label or CTA text')
+      +fonts-list-block('fonts-list-block__title--body', 'fonts-list-block__text--body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

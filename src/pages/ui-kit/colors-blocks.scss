@@ -1,0 +1,39 @@
+.block-color {
+  display: flex;
+  &__instance {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  &__title,
+  &__hex {
+    margin: 0;
+  }
+  &--dark100 {
+    background-color: $darkshade-100;
+  }
+  &--dark75 {
+    background-color: $darkshade-75;
+  }
+  &--dark50 {
+    background-color: $darkshade-50;
+  }
+  &--dark25 {
+    background-color: $darkshade-25;
+  }
+  &--dark5 {
+    background-color: $darkshade-5;
+  }
+  &--purple {
+    background-color: $purple;
+  }
+  &--green {
+    background-color: $green;
+  }
+}
