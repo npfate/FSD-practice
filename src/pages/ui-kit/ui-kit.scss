@@ -13,8 +13,9 @@
 }
 
 .fonts-list {
-  display: flex;
-  flex-direction: column;
+  display: table;
+  // display: flex;
+  // flex-direction: column;
   // display: grid;
   // grid-template-rows: auto auto auto auto 100px 100px 100px;
   // grid-gap: 20px;

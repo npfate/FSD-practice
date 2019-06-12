@@ -1,8 +1,10 @@
 .fonts-list-block {
-  display: grid;
-  grid-template-columns: 40px auto;
-  grid-gap: 50px 30px;
+  // display: grid;
+  // grid-template-columns: 40px auto;
+  // grid-gap: 50px 30px;
+  display: table-row;
   &__title {
+    display: table-cell;
     text-align: right;
     color: $darkshade-25;
     &--h1 {
@@ -26,6 +28,9 @@
     }
   }
   &__text {
+    display: table-cell;
+    padding-left: 30px;
+    padding-bottom: 50px;
     color: $darkshade-100;
     &--h1 {
       font-family: Quicksand;

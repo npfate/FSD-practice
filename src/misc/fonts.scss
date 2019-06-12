@@ -1,28 +1,29 @@
+$fonts-path: './misc/fonts';
 @import '../styles/colors';
 @font-face {
   font-family: 'Montserrat';
-  src: url('./misc/fonts/Montserrat-Bold.woff') format('woff');
+  src: url('#{$fonts-path}/Montserrat-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('./misc/fonts/Montserrat-Regular.woff') format('woff');
+  src: url('#{$fonts-path}/Montserrat-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('./misc/fonts/Quicksand-Bold.woff') format('woff');
+  src: url('#{$fonts-path}/Quicksand-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('./misc/fonts/Quicksand-Regular.woff') format('woff');
+  src: url('#{$fonts-path}/Quicksand-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -35,7 +36,8 @@ body {
   color: $darkshade-75;
 }
 
-h1 {
+h1,
+.title-h1 {
   font-family: Quicksand;
   font-weight: 700;
   font-size: 24px;
@@ -43,7 +45,8 @@ h1 {
   color: $darkshade-100;
 }
 
-h2 {
+h2,
+.title-h2 {
   font-family: Quicksand;
   font-weight: 700;
   font-size: 19px;
@@ -51,7 +54,8 @@ h2 {
   color: $darkshade-100;
 }
 
-h3 {
+h3,
+.title-h3 {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 12px;
