@@ -1,7 +1,7 @@
 - const hintVisible = true
 
-
-mixin textfield(title, name, id, placeholder, style, hint)
+mixin textfield(title, name, choosetype, id, placeholder, style, hint)
  .textfield  
   label(class="textfield__label title-h3" for=id data-hint=hint)= title
-  input.textfield__input(class=style type="email" placeholder=placeholder name=name id=id)
+  input.textfield__input(class=style type=choosetype placeholder=placeholder name=name id=id)
+

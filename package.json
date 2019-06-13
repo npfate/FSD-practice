@@ -4,6 +4,7 @@
   "description": "Добавить сюда ссылку на Github Pages",
   "main": "app.js",
   "dependencies": {
+    "material-icons": "^0.3.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

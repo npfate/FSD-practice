@@ -1,5 +1,11 @@
 .wrapper-1
   include ../../components/text-field/text-field.pug
-  +textfield("Text Field", "default", "textfield-default", "Email", "", "Default")
-  +textfield("Text Field", "hover-focus", "textfield-hover-focus", "This is pretty awesome", "", "hover / focus")
-  +textfield("Masked Text Field", "masked", "textfield-masked", "ДД.ММ.ГГГГ", "", "Default")
+  //- +textfield(title, name, choosetype, id, placeholder, style, hint)
+  +textfield("Text Field", "default", "email", "textfield-default", "Email", "", "Default")
+  +textfield("Text Field", "hover-focus", "email", "textfield-hover-focus", "This is pretty awesome", "", "hover / focus")
+  +textfield("Masked Text Field", "masked", "email", "textfield-masked", "ДД.ММ.ГГГГ", "", "Default")
+  include ../../components/dropdown/dropdown.pug
+  +dropdown("Dropdown", "dropdown", "", "dropdown-default", "Сколько гостей", "", "Default")
+
+
+//- TODO: изменить mixin на dropdown 

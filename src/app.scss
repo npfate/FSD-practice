@@ -1,10 +1,12 @@
+$material-icons-font-path: '~material-icons/iconfont/';
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-@import 'misc/fonts';
 @import 'styles/colors';
+@import 'misc/fonts';
+@import '~material-icons/iconfont/material-icons.scss';
 @import 'pages/ui-kit/ui-kit.scss';
 @import 'pages/ui-kit/form-elements.scss'

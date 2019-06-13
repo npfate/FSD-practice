@@ -34,3 +34,9 @@
     outline: none;
   }
 }
+
+.textfield__input--dropdown {
+  &::placeholder {
+    color: $darkshade-75;
+  }
+}
