@@ -1,42 +1,34 @@
 .textfield {
   width: 320px;
-}
-
-.textfield__label {
-  display: block;
-  margin-bottom: 5px;
   position: relative;
-  /*TODO: Удалить потом*/
-  &::after {
-    content: attr(data-hint);
-    text-transform: uppercase;
-    font-weight: normal;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: $darkshade-50;
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    /*TODO: Удалить потом*/
+    &::after {
+      content: attr(data-hint);
+      text-transform: uppercase;
+      font-weight: normal;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $darkshade-50;
+    }
   }
-}
-
-.textfield__input {
-  width: 100%;
-  padding: 13px 15px;
-  border: 1px solid $darkshade-25;
-  border-radius: 4px;
-  color: $darkshade-75;
-  font-size: 14px;
-  &::placeholder {
-    color: $darkshade-25;
-  }
-  &:hover,
-  &:focus {
-    border-color: $darkshade-50;
-    outline: none;
-  }
-}
-
-.textfield__input--dropdown {
-  &::placeholder {
+  &__input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid $darkshade-25;
+    border-radius: 4px;
     color: $darkshade-75;
+    font-size: 14px;
+    &::placeholder {
+      color: $darkshade-25;
+    }
+    &:hover,
+    &:focus {
+      border-color: $darkshade-50;
+      outline: none;
+    }
   }
 }

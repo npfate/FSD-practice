@@ -5,7 +5,37 @@
   +textfield("Text Field", "hover-focus", "email", "textfield-hover-focus", "This is pretty awesome", "", "hover / focus")
   +textfield("Masked Text Field", "masked", "email", "textfield-masked", "ДД.ММ.ГГГГ", "", "Default")
   include ../../components/dropdown/dropdown.pug
-  +dropdown("Dropdown", "dropdown", "", "dropdown-default", "Сколько гостей", "", "Default")
+  +dropdown({
+            title: "Dropdown", 
+            name: "dropdown", 
+            id: "dropdown-default", 
+            hint: "Default",
+            inputType: "text", 
+            placeholder: "Сколько гостей", 
+            labelClasses: ["textfield__label", "title-h3"], 
+            inputClasses: ""
+            })
+  +dropdown({
+            title: "Date Dropdown", 
+            name: "date-dropdown", 
+            id: "date-dropdown", 
+            hint: "",
+            inputType: "text", 
+            placeholder: "ДД.ММ.ГГГГ", 
+            labelClasses: ["textfield__label", "title-h3"], 
+            inputClasses: ""
+            })(class="dropdown--date")
+  +dropdown({
+            title: "Filter Date Dropdown", 
+            name: "filter-date-dropdown", 
+            id: "filter-date-dropdown", 
+            hint: "",
+            inputType: "text", 
+            placeholder: "19 авг - 23 авг", 
+            labelClasses: ["textfield__label", "title-h3"], 
+            inputClasses: ""
+            })
+
 
 
 //- TODO: изменить mixin на dropdown 
