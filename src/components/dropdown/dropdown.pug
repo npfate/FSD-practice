@@ -1,7 +1,0 @@
-mixin dropdown(object)
- .dropdown(class!=attributes.class)
-  //- if object.link != null
-  label(class=object.labelClasses for=object.id data-hint=object.hint) #{object.title}
-  input.dropdown__input(class=object.inputClasses type=object.inputType placeholder=object.placeholder name=object.name id=object.id)
-  .dropdown__icon
-    i.material-icons(class="dropdown__icon--expand") expand_more

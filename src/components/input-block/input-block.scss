@@ -1,0 +1,17 @@
+.input-block {
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+    /*TODO: Удалить потом*/
+    &::after {
+      content: attr(data-hint);
+      text-transform: uppercase;
+      font-weight: normal;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $darkshade-50;
+    }
+  }
+}

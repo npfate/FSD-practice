@@ -1,7 +1,0 @@
-mixin textfield(object)
- .textfield(class!=attributes.class)
-  label(class=object.labelClasses for=object.id data-hint=object.hint) #{object.title}
-  input.textfield__input(class=object.inputClasses type=object.inputType placeholder=object.placeholder name=object.name id=object.id)
-  if object.type=="dropdown"
-    .dropdown-icon
-      i.material-icons(class="dropdown-icon--expand") expand_more

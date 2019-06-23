@@ -1,0 +1,19 @@
+- var inputField = "input-field";
+- var inputBlock = "input-block";
+
+mixin inputField(opt)
+ div(class= [inputBlock, opt.inputBlockClasses])
+  //- If there has to be a label then call it by ˝title: ""˝
+  if opt.title
+    label(class=opt.inputBlockLabelClasses for=opt.id data-hint=opt.hint) #{opt.title}
+  //- .inputfield(class!=attributes.class)
+  div(class= [inputField, opt.inputFieldClasses])
+    input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+    if opt.type=="dropdown"
+      .icons
+        .icons__input
+          i.material-icons.icons--dropdown expand_more
+    if opt.type=="subscribe"
+      .icons
+        .icons__input
+          i.material-icons.icons--arrow.icons--purple arrow_forward

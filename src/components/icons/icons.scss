@@ -1,0 +1,12 @@
+.icons {
+  &--dropdown,
+  &--arrow {
+    transform: translate(10px, 10px);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &--purple {
+    color: $purple;
+  }
+}
