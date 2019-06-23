@@ -1,10 +1,3 @@
-//- mixin dropdown(title, name, choosetype, id, placeholder, style, hint)
-//-  .dropdown(class!=attributes.class)
-//-   label(class="textfield__label title-h3" for=id data-hint=hint)= title
-//-   input.dropdown__input(class=style type=choosetype placeholder=placeholder name=name id=id)
-//-   .dropdown__icon
-//-     i.material-icons(class="dropdown__icon--expand") expand_more
-
 mixin dropdown(object)
  .dropdown(class!=attributes.class)
   //- if object.link != null

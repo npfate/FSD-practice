@@ -1,7 +1,7 @@
-- const hintVisible = true
-
-mixin textfield(title, name, choosetype, id, placeholder, style, hint)
- .textfield  
-  label(class="textfield__label title-h3" for=id data-hint=hint)= title
-  input.textfield__input(class=style type=choosetype placeholder=placeholder name=name id=id)
-
+mixin textfield(object)
+ .textfield(class!=attributes.class)
+  label(class=object.labelClasses for=object.id data-hint=object.hint) #{object.title}
+  input.textfield__input(class=object.inputClasses type=object.inputType placeholder=object.placeholder name=object.name id=object.id)
+  if object.type=="dropdown"
+    .dropdown-icon
+      i.material-icons(class="dropdown-icon--expand") expand_more

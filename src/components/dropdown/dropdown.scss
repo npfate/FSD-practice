@@ -1,47 +1,13 @@
-.dropdown {
-  width: 320px;
-  position: relative;
-  &__label {
-    display: block;
-    margin-bottom: 5px;
-    /*TODO: Удалить потом*/
-    &::after {
-      content: attr(data-hint);
-      text-transform: uppercase;
-      font-weight: normal;
-      position: absolute;
-      top: 0;
-      right: 0;
-      color: $darkshade-50;
+.dropdown-icon {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  margin-top: -44px;
+  right: 0;
+  &--expand {
+    transform: translate(10px, 10px);
+    &:hover {
+      cursor: pointer;
     }
-  }
-  &__input {
-    width: 100%;
-    padding: 13px 32px 13px 15px;
-    border: 1px solid $darkshade-25;
-    border-radius: 4px;
-    color: $darkshade-75;
-    font-size: 14px;
-    &:hover,
-    &:focus {
-      border-color: $darkshade-50;
-      outline: none;
-    }
-  }
-  &__icon {
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    margin-top: -44px;
-    right: 0;
-    &--expand {
-      transform: translate(10px, 10px);
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-  &--date {
-    width: 150px;
   }
 }

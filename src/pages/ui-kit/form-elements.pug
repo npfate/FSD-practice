@@ -1,41 +1,81 @@
 .wrapper-1
   include ../../components/text-field/text-field.pug
   //- +textfield(title, name, choosetype, id, placeholder, style, hint)
-  +textfield("Text Field", "default", "email", "textfield-default", "Email", "", "Default")
-  +textfield("Text Field", "hover-focus", "email", "textfield-hover-focus", "This is pretty awesome", "", "hover / focus")
-  +textfield("Masked Text Field", "masked", "email", "textfield-masked", "ДД.ММ.ГГГГ", "", "Default")
-  include ../../components/dropdown/dropdown.pug
-  +dropdown({
-            title: "Dropdown", 
-            name: "dropdown", 
-            id: "dropdown-default", 
-            hint: "Default",
-            inputType: "text", 
-            placeholder: "Сколько гостей", 
-            labelClasses: ["textfield__label", "title-h3"], 
-            inputClasses: ""
-            })
-  +dropdown({
-            title: "Date Dropdown", 
-            name: "date-dropdown", 
-            id: "date-dropdown", 
-            hint: "",
-            inputType: "text", 
-            placeholder: "ДД.ММ.ГГГГ", 
-            labelClasses: ["textfield__label", "title-h3"], 
-            inputClasses: ""
-            })(class="dropdown--date")
-  +dropdown({
-            title: "Filter Date Dropdown", 
-            name: "filter-date-dropdown", 
-            id: "filter-date-dropdown", 
-            hint: "",
-            inputType: "text", 
-            placeholder: "19 авг - 23 авг", 
-            labelClasses: ["textfield__label", "title-h3"], 
-            inputClasses: ""
-            })
-
-
-
-//- TODO: изменить mixin на dropdown 
+  +textfield({title: "Text Field",
+              name: "default",
+              id: "textfield-default",
+              hint: "Default",
+              inputType: "email",
+              placeholder: "Email",
+              labelClasses: ["textfield__label", "title-h3"],
+              inputClasses: ""})
+  +textfield({title: "Text Field",
+              name: "hover-focus",
+              id: "textfield-hover-focus",
+              hint: "hover / focus",
+              inputType: "email",
+              placeholder: "This is pretty awesome",
+              labelClasses: ["textfield__label", "title-h3"],
+              inputClasses: ""})
+  +textfield({title: "Masked Text Field",
+              name: "masked",
+              id: "textfield-masked",
+              hint: "Default",
+              inputType: "email",
+              placeholder: "ДД.ММ.ГГГГ",
+              labelClasses: ["textfield__label", "title-h3"],
+              inputClasses: ""})
+  +textfield({title: "Dropdown",
+              name: "dropdown",
+              id: "dropdown-default",
+              hint: "Default",
+              type: "dropdown",
+              inputType: "text",
+              placeholder: "Сколько гостей",
+              labelClasses: ["textfield__label", "title-h3"],
+              inputClasses: "textfield__input--dropdown"})
+  +textfield({title: "Date Dropdown", 
+              name: "date-dropdown", 
+              id: "date-dropdown", 
+              hint: "",
+              type: "dropdown",
+              inputType: "text",
+              placeholder: "ДД.ММ.ГГГГ",
+              labelClasses: ["textfield__label", "title-h3"],
+              inputClasses: "textfield__input--dropdown"
+              })(class="textfield--date")
+  +textfield({title: "Filter Date Dropdown", 
+              name: "filter-date-dropdown", 
+              id: "filter-date-dropdown", 
+              hint: "",
+              type: "dropdown",
+              inputType: "text", 
+              placeholder: "19 авг - 23 авг", 
+              labelClasses: ["textfield__label", "title-h3"], 
+              inputClasses: "textfield__input--dropdown"})
+  //- include ../../components/dropdown/dropdown.pug
+  //- +dropdown({title: "Dropdown", 
+  //-           name: "dropdown", 
+  //-           id: "dropdown-default", 
+  //-           hint: "Default",
+  //-           inputType: "text", 
+  //-           placeholder: "Сколько гостей", 
+  //-           labelClasses: ["textfield__label", "title-h3"], 
+  //-           inputClasses: ""})
+  //- +dropdown({title: "Date Dropdown", 
+  //-           name: "date-dropdown", 
+  //-           id: "date-dropdown", 
+  //-           hint: "",            
+  //-           inputType: "text", 
+  //-           placeholder: "ДД.ММ.ГГГГ", 
+  //-           labelClasses: ["textfield__label", "title-h3"], 
+  //-           inputClasses: ""
+  //-           })(class="dropdown--date")
+  //- +dropdown({title: "Filter Date Dropdown", 
+  //-           name: "filter-date-dropdown", 
+  //-           id: "filter-date-dropdown", 
+  //-           hint: "",
+  //-           inputType: "text", 
+  //-           placeholder: "19 авг - 23 авг", 
+  //-           labelClasses: ["textfield__label", "title-h3"], 
+  //-           inputClasses: ""})
