@@ -12,7 +12,7 @@
               placeholder: "Email",
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
+              inputFieldClasses: [],
               inputFieldInputClasses: [inputfield + "__input"]})
   +inputField({title: "Text Field",
               type: "textfield",
@@ -23,7 +23,7 @@
               placeholder: "This is pretty awesome",
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
+              inputFieldClasses: [],
               inputFieldInputClasses: [inputfield + "__input"]})
   +inputField({title: "Masked Text Field",
               type: "textfield",
@@ -34,7 +34,7 @@
               placeholder: "ДД.ММ.ГГГГ",
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
+              inputFieldClasses: [],
               inputFieldInputClasses: [inputfield + "__input"]})
   +inputField({title: "Dropdown",
               type: "dropdown",
@@ -45,8 +45,8 @@
               placeholder: "Сколько гостей",
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
-              inputFieldInputClasses: [inputfield + "__input"]})
+              inputFieldClasses: [],
+              inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
   +inputField({title: "Date Dropdown", 
               type: "dropdown",
               name: "date-dropdown", 
@@ -57,7 +57,7 @@
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
               inputFieldClasses: [inputfield + "--date"],
-              inputFieldInputClasses: [inputfield + "__input"]})
+              inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
   +inputField({title: "Filter Date Dropdown", 
               type: "dropdown",
               name: "filter-date-dropdown", 
@@ -67,8 +67,8 @@
               placeholder: "19 авг - 23 авг", 
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
-              inputFieldInputClasses: [inputfield + "__input"]})
+              inputFieldClasses: [],
+              inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
   +inputField({title: "Subscription text field", 
               type: "subscribe",
               name: "filter-date-dropdown", 
@@ -78,5 +78,5 @@
               placeholder: "Email", 
               inputBlockClasses: ["col-xs"],
               inputBlockLabelClasses: [inputblock + "__label", "title-h3"],
-              inputFieldClasses: [inputfield],
-              inputFieldInputClasses: [inputfield + "__input"]})
+              inputFieldClasses: [],
+              inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})

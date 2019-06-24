@@ -1,4 +1,11 @@
 .icons {
+  &__input {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    right: 0;
+  }
   &--dropdown,
   &--arrow {
     transform: translate(10px, 10px);
@@ -9,4 +16,16 @@
   &--purple {
     color: $purple;
   }
+}
+
+.icons:hover .input-field {
+  border-color: $darkshade-50;
+}
+
+.icons--dropdown:hover .input-field {
+  border-color: $darkshade-50;
+}
+
+.icons__input:hover .input-field {
+  border-color: $darkshade-50;
 }
