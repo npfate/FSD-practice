@@ -1,0 +1,11 @@
+include ../selector/selector.pug
+
+mixin dropdown(dropdownList)
+  ul.dropdown
+    - var list = dropdownList;
+    each item, index in list
+      li.dropdown__item
+        span.dropdown__title= index        
+        +selector({classes: ["selector--decrement"]})
+        span.dropdown__value= item
+        +selector({classes: ["selector--increment"]})

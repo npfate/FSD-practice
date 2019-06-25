@@ -1,9 +1,11 @@
 @import '../../components/input-field/input-field.scss';
 @import '../../components/input-block/input-block.scss';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/selector/selector.scss';
 @import '../../components/icons/icons.scss';
 .wrapper-1 {
   display: grid;
   grid-gap: 20px;
-  margin-top: 200px;
+  margin-top: 50px;
   margin-left: 200px;
 }

@@ -3,6 +3,7 @@
     position: relative;
     display: block;
     margin-bottom: 5px;
+    @include title-h3;
     /*TODO: Удалить потом*/
     &::after {
       content: attr(data-hint);

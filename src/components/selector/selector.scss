@@ -1,0 +1,25 @@
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $darkshade-25;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  &--increment {
+    &::after {
+      content: "+"
+    }
+  }
+  &--decrement {
+    &::after {
+      content: "-"
+    }
+  }
+  &--inactive {
+    border-color: $darkshade-5;
+  }
+}

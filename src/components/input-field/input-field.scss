@@ -1,10 +1,11 @@
+$radius: 4px;
 .input-field {
   position: relative;
   &__input {
     width: 100%;
     padding: 13px 15px;
     border: 1px solid $darkshade-25;
-    border-radius: 4px;
+    border-radius: $radius;
     color: $darkshade-75;
     font-size: 14px;
     &::placeholder {
@@ -18,8 +19,14 @@
     &--dropdown {
       padding-right: 44px;
     }
+    &--active {
+      border-radius: $radius $radius 0 0;
+    }
   }
   &--date {
     width: 150px;
+  }
+  &:hover .input-field__input {
+    border-color: $darkshade-50;
   }
 }

@@ -36,6 +36,37 @@ body {
   color: $darkshade-75;
 }
 
+@mixin title-h1 {
+  font: {
+    family: Quicksand;
+    weight: 700;
+    size: 24px;
+  }
+  line-height: 30px;
+  color: $darkshade-100;
+}
+
+@mixin title-h2 {
+  font: {
+    family: Quicksand;
+    weight: 700;
+    size: 19px;
+  }
+  line-height: 24px;
+  color: $darkshade-100;
+}
+
+@mixin title-h3 {
+  font: {
+    family: Montserrat;
+    weight: 700;
+    size: 12px;
+  }
+  text-transform: uppercase;
+  line-height: 15px;
+  color: $darkshade-100;
+}
+
 h1,
 .title-h1 {
   font-family: Quicksand;
