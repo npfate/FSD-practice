@@ -1,10 +1,9 @@
 - var inputField = "input-field";
 - var inputBlock = "input-block";
 
-include ../icons/icons.pug
-include ../dropdown/dropdown.pug
 
-mixin input-field(opt, dropdownList)
+
+mixin input-field(opt, dropdownList, mod)
  div(class= [inputBlock, opt.inputBlockClasses])
   //- If there has to be a label then call it by ˝title: ""˝
   if opt.title
@@ -15,8 +14,13 @@ mixin input-field(opt, dropdownList)
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
     if opt.type=="dropdown"
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
-      +icon({type: "icons--dropdown", icon: "expand_more"})      
-      +dropdown(dropdownList)
+      include ../icons/icons.pug
+      +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
+      include ../dropdown/dropdown.pug
+      +dropdown(dropdownList, mod)
+    if opt.type=="date-dropdown"
+      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+      +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
     if opt.type=="subscribe"
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-      +icon({type: ["icons--arrow", "icons--purple"], icon: "arrow_forward"})
+      +icon({place: "input",type: ["icons--arrow", "icons--purple"], icon: "arrow_forward"})

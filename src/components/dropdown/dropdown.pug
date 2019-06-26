@@ -1,11 +1,17 @@
 include ../selector/selector.pug
 
-mixin dropdown(dropdownList)
+mixin dropdown(dropdownList, mod)
   ul.dropdown
     - var list = dropdownList;
     each item, index in list
       li.dropdown__item
         span.dropdown__title= index        
-        +selector({classes: ["selector--decrement"]})
-        span.dropdown__value= item
-        +selector({classes: ["selector--increment"]})
+        .dropdown__choose
+          +selector({classes: ["selector--decrement"]})
+          span.dropdown__value= item
+          +selector({classes: ["selector--increment"]})
+    if mod.clear || mod.apply
+      li.dropdown__item
+        input(class="dropdown__clear" type="reset" value="Очистить") 
+        input(class="dropdown__apply" type="submit" value="Применить") 
+        

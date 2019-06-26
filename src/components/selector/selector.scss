@@ -11,12 +11,12 @@
   cursor: pointer;
   &--increment {
     &::after {
-      content: "+"
+      content: "\002B";
     }
   }
   &--decrement {
     &::after {
-      content: "-"
+      content: "\2212"
     }
   }
   &--inactive {

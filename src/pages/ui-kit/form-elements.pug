@@ -3,6 +3,8 @@
 
 .wrapper-1
   include ../../components/input-field/input-field.pug
+  //- Если type: dropdown, то передаем как минимум 3 аргумента
+  
   +input-field(
         {title: "Text Field",
         type: "textfield",
@@ -51,10 +53,11 @@
         inputBlockLabelClasses: [inputblock + "__label"],
         inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
-        {"Спальни": 0, "Кровати": 0, "Ванные комнаты": 0})
+        {"Спальни": 0, "Кровати": 0, "Ванные комнаты": 0},
+        {apply: true})
   +input-field(
         {title: "Date Dropdown", 
-        type: "dropdown",
+        type: "date-dropdown",
         name: "date-dropdown", 
         id: "date-dropdown", 
         hint: "",
@@ -63,8 +66,7 @@
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
         inputFieldClasses: [inputfield + "--date"],
-        inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
-        {})
+        inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
   +input-field(
         {title: "Filter Date Dropdown", 
         type: "dropdown",
@@ -77,7 +79,8 @@
         inputBlockLabelClasses: [inputblock + "__label"],
         inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
-        {"Взрослые": 0, "Дети": 0, "Младенцы": 0})
+        {"Взрослые": 0, "Дети": 0, "Младенцы": 0},
+        {clear: true, apply: true})
   +input-field(
         {title: "Subscription text field", 
         type: "subscribe",
