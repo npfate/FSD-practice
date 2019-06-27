@@ -4,21 +4,23 @@ let inputFieldsInput = document.querySelectorAll(".input-field__input");
 for (let i = 0; i < inputFields.length; i++) {
   let iconButtons = inputFieldsInput[i].parentElement.querySelector(".icons--dropdown");
   let dropdown = inputFieldsInput[i].parentElement.querySelector(".dropdown");
-  inputFieldsInput[i].addEventListener("focus", function() {
-    inputFieldsInput[i].parentElement.classList.add("input-field--focused");
-  });
-  inputFieldsInput[i].addEventListener("blur", function() {
-    inputFieldsInput[i].parentElement.classList.remove("input-field--focused");
-  });
+  // inputFieldsInput[i].addEventListener("focus", function() {
+  //   inputFieldsInput[i].parentElement.classList.add("input-field--focused");
+  // });
+  // inputFieldsInput[i].addEventListener("blur", function() {
+  //   inputFieldsInput[i].parentElement.classList.remove("input-field--focused");
+  // });
   if (iconButtons !== null || dropdown !== null) {
-    iconButtons.addEventListener("click", function() {
+    iconButtons.addEventListener("mousedown", function() {
       inputFieldsInput[i].parentElement.classList.toggle("input-field--focused");
+      inputFieldsInput[i].classList.toggle("input-field__input--expanded");
       dropdown.classList.toggle("dropdown--expanded");
     });
   }
   document.addEventListener("click", function(event) {
     if (event.target.closest(".input-field")) return;
     inputFieldsInput[i].parentElement.classList.remove("input-field--focused");
+    inputFieldsInput[i].classList.remove("input-field__input--expanded");
     dropdown.classList.remove("dropdown--expanded");
   });
 }
