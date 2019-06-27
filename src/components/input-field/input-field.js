@@ -19,6 +19,7 @@ for (let i = 0; i < inputFields.length; i++) {
   document.addEventListener("click", function(event) {
     if (event.target.closest(".input-field")) return;
     inputFieldsInput[i].parentElement.classList.remove("input-field--focused");
+    dropdown.classList.remove("dropdown--expanded");
   });
 }
 

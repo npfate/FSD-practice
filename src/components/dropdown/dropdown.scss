@@ -9,6 +9,7 @@ $radius: 4px;
   // position: absolute;
   // width: 100%;
   // z-index: 10;
+  // opacity: 0;
   &__item {
     display: flex;
     justify-content: space-between;
@@ -55,5 +56,6 @@ $radius: 4px;
   }
   &--expanded {
     display: block;
+    opacity: 1;
   }
 }
