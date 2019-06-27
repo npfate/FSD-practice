@@ -1,32 +1,32 @@
 $radius: 4px;
 .input-field {
   position: relative;
+  border: 1px solid $darkshade-25;
+  border-radius: 4px;
   &__input {
     width: 100%;
     padding: 13px 15px;
-    border: 1px solid $darkshade-25;
+    border: 0;
     border-radius: $radius;
     color: $darkshade-75;
     font-size: 14px;
     &::placeholder {
       color: $darkshade-25;
     }
-    &:hover,
     &:focus {
-      border-color: $darkshade-50;
       outline: none;
     }
     &--dropdown {
       padding-right: 44px;
     }
-    &--active {
-      border-radius: $radius $radius 0 0;
-    }
   }
   &--date {
     width: 150px;
   }
-  &:hover .input-field__input {
+  &:hover,
+  &:focus,
+  &--focused {
     border-color: $darkshade-50;
+    outline: none;
   }
 }

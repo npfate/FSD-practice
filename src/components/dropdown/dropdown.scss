@@ -1,12 +1,11 @@
 $radius: 4px;
 .dropdown {
-  border: 1px solid $darkshade-50;
-  border-radius: 0 0 $radius $radius;
+  border-top: 1px solid $darkshade-50;
   margin: 0;
-  margin-top: -1px;
-  padding: 7px 7px 13px 15px;
+  padding: 7px 7px 7px 15px;
   background-color: $white;
-  // display: none;
+  border-radius: 0 0 $radius $radius;
+  display: none;
   // position: absolute;
   // width: 100%;
   // z-index: 10;
@@ -20,6 +19,10 @@ $radius: 4px;
     &:first-child {
       margin-top: 0;
     }
+    &:last-child {
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
   }
   &__title,
   &__value,
@@ -27,21 +30,20 @@ $radius: 4px;
   &__apply {
     @include title-h3;
   }
+  &__choose {
+    display: flex;
+    align-items: center;
+  }
   &__value {
     display: flex;
     justify-content: center;
     width: 32px;
-  }
-  &__choose {
-    display: flex;
-    align-items: center;
   }
   &__clear,
   &__apply {
     outline: none;
     border: 0;
     padding: 0;
-    margin-top: 20px;
     cursor: pointer;
   }
   &__clear {
@@ -50,5 +52,8 @@ $radius: 4px;
   &__apply {
     color: $purple;
     margin-left: auto;
+  }
+  &--expanded {
+    display: block;
   }
 }
