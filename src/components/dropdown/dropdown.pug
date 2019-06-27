@@ -11,7 +11,9 @@ mixin dropdown(dropdownList, mod)
           span.dropdown__value= item
           +selector({classes: ["selector--increment"]})
     if mod.clear || mod.apply
-      li.dropdown__item
-        input(class="dropdown__clear" type="reset" value="Очистить") 
-        input(class="dropdown__apply" type="submit" value="Применить") 
+      li(class= ["dropdown__item"])
+        if mod.clear
+          input(class="dropdown__clear" type="reset" value="Очистить") 
+        if mod.apply
+          button(class="dropdown__apply") Применить
         

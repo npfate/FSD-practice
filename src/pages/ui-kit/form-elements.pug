@@ -3,6 +3,7 @@
 
 .wrapper-1
   include ../../components/input-field/input-field.pug
+  //- Инпуты: textfield, dropdown, date-dropdown, subscribe
   //- Если type: dropdown, то передаем как минимум 3 аргумента
   
   +input-field(
@@ -27,7 +28,6 @@
         placeholder: "This is pretty awesome",
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input"]})
   +input-field(
         {title: "Masked Text Field",
@@ -39,7 +39,6 @@
         placeholder: "ДД.ММ.ГГГГ",
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input"]})
   +input-field(
         {title: "Dropdown",
@@ -51,7 +50,6 @@
         placeholder: "Сколько гостей",
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
         {"Спальни": 0, "Кровати": 0, "Ванные комнаты": 0},
         {apply: true})
@@ -77,7 +75,6 @@
         placeholder: "19 авг - 23 авг", 
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
         {"Взрослые": 0, "Дети": 0, "Младенцы": 0},
         {clear: true, apply: true})
@@ -91,5 +88,4 @@
         placeholder: "Email", 
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
