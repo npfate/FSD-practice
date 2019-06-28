@@ -13,6 +13,9 @@ $radius: 4px;
     &::placeholder {
       color: $darkshade-25;
     }
+    &:hover {
+      border-color: $darkshade-50;
+    }
     &:focus {
       outline: none;
       border-color: $darkshade-50;

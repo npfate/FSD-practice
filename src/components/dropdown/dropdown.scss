@@ -9,8 +9,6 @@
   display: none;
   position: absolute;
   width: 100%;
-  z-index: 10;
-  opacity: 0;
   &__item {
     display: flex;
     justify-content: space-between;
@@ -57,7 +55,7 @@
   }
   &--expanded {
     display: block;
-    opacity: 1;
     border-color: $darkshade-50;
+    z-index: 10;
   }
 }
