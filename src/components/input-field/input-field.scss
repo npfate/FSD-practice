@@ -1,7 +1,6 @@
 $radius: 4px;
 .input-field {
   position: relative;
-  // border: 1px solid $darkshade-25;
   border-radius: $radius;
   &__input {
     width: 100%;
@@ -31,10 +30,4 @@ $radius: 4px;
   &--date {
     width: 150px;
   }
-  // &:hover,
-  // &:focus,
-  // &--focused {
-  //   border-color: $darkshade-50;
-  //   outline: none;
-  // }
 }

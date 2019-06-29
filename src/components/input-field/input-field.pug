@@ -13,14 +13,14 @@ mixin input-field(opt, dropdownList, mod)
     if opt.type=="textfield"
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
     if opt.type=="dropdown"
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
       include ../icons/icons.pug
       +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
+      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
       include ../dropdown/dropdown.pug
       +dropdown(dropdownList, mod)
     if opt.type=="date-dropdown"
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
       +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
-    if opt.type=="subscribe"
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+    if opt.type=="subscribe"
       +icon({place: "input",type: ["icons--arrow", "icons--purple"], icon: "arrow_forward"})
+      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)

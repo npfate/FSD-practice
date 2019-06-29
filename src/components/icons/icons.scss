@@ -1,10 +1,13 @@
 .icons {
-  &__input {
+  &--input {
     position: absolute;
     width: 44px;
     height: 44px;
     top: 0;
     right: 0;
+    &:hover~.input-field__input {
+      border-color: $darkshade-50;
+    }
   }
   &--dropdown,
   &--arrow {
