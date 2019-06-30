@@ -19,10 +19,6 @@
     &:first-child {
       margin-top: 0;
     }
-    &:last-child {
-      margin-top: 20px;
-      margin-bottom: 6px;
-    }
   }
   &__title,
   &__value,
@@ -45,6 +41,8 @@
     border: 0;
     padding: 0;
     cursor: pointer;
+    margin-top: 13px;
+    margin-bottom: 6px;
   }
   &__clear {
     color: $darkshade-50;
