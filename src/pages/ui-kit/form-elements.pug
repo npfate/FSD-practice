@@ -6,6 +6,7 @@
   //- Input types: textfield, dropdown, date-dropdown, subscribe
   //- Если type: dropdown, то передаем как минимум 3 аргумента
   include ../../components/checkbox-list/checkbox-list.pug
+  include ../../components/checkbox/checkbox.pug
   
   +input-field(
         {title: "Text Field",
@@ -90,10 +91,7 @@
         inputBlockClasses: ["col-xs"],
         inputBlockLabelClasses: [inputblock + "__label"],
         inputFieldInputClasses: [inputfield + "__input"]})
-  +checkbox-list(
-        {listTitle: "Checkbox Buttons",
-        labelClasses: [],
-        checkboxClasses: []},
-        {checkboxId: "",
-        checkboxTitle: "",
-        checkboxName: ""})
+  +checkbox-list({listTitle: "Checkbox Buttons"})
+    +checkbox({checkboxTitle: "Можно курить",
+              checkboxId: "chb-smokable",
+              checkboxName: "chb-smokable"})

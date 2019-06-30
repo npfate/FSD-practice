@@ -1,0 +1,4 @@
+mixin checkbox(options)
+  li.checkbox-item
+    label(class=["checkbox__label", options.labelClasses] for= options.checkboxId) #{options.checkboxTitle}
+    input(type="checkbox" class= ["checkbox__input", options.checkboxClasses] id= options.checkboxId name= checkboxList.checkboxName)
