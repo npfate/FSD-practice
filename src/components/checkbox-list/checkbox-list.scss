@@ -6,6 +6,13 @@
     margin: 15px 0 18px;
     &--expandable {
       padding-right: 44px;
+      // &::after {
+      //   content: "";
+      //   cursor: pointer;
+      //   width: 24px;
+      //   height: 24px;
+      //   background: url('./misc/images/expand_more.svg') no-repeat center top;
+      // }
     }
   }
 }
