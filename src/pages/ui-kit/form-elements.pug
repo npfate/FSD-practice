@@ -6,7 +6,6 @@
   //- Input types: textfield, dropdown, date-dropdown, subscribe
   //- Если type: dropdown, то передаем как минимум 3 аргумента
   include ../../components/checkbox-list/checkbox-list.pug
-  include ../../components/checkbox/checkbox.pug
   
   //- +input-field(
         {title: 'Text Field',
@@ -53,7 +52,7 @@
         inputBlockClasses: ['col-xs'],
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
-        {'Спальни': 0, 'Кровати': 0, 'Ванные комнаты': 0},
+        {'Спальни': 2, 'Кровати': 2, 'Ванные комнаты': 0},
         {apply: true})
   //- +input-field(
         {title: 'Date Dropdown', 
@@ -86,36 +85,41 @@
         name: 'subscription-text-field', 
         id: 'subscription-text-field', 
         hint: '',
-        inputType: 'text', 
+        inputType: 'email', 
         placeholder: 'Email', 
         inputBlockClasses: ['col-xs'],
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input']})
   +checkbox-list(
-    {listTitle: 'Checkbox Buttons', listClasses: ['col-xs'], expandable: true},
+    {expandable: true, listTitle: 'Expandable Checkbox Buttons', listClasses: ['col-xs']},
     [
-      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
-      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
-      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+      {checkboxTitle: 'Завтрак'}, 
+      {checkboxTitle: 'Письменный стол', checked: true},
+      {checkboxTitle: 'Стул для кормления', checked: true},
+      {checkboxTitle: 'Кроватка', checked: true},
+      {checkboxTitle: 'Телевизор'}, 
+      {checkboxTitle: 'Шампунь'}, 
+      {checkboxTitle: 'Телевизор'}, 
+      {checkboxTitle: 'Шампунь'}
     ])    
   +checkbox-list(
     {listTitle: 'Checkbox Buttons', listClasses: ['col-xs']},
     [
-      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
-      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
-      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+      {checkboxTitle: 'Можно курить'}, 
+      {checkboxTitle: 'Можно с питомцами', checked: true},
+      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)'}
     ])
   +checkbox-list(
     {listClasses: ['col-xs']},
     [
-      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
-      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
-      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+      {checkboxTitle: 'Можно курить'}, 
+      {checkboxTitle: 'Можно с питомцами', checked: true},
+      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)'}
     ])
   +checkbox-list(
     {listTitle: 'Rich Checkbox Buttons', listClasses: ['col-xs']},
     [
-      {checkboxTitle: 'Широкий коридор', checkboxSubtitle: 'Ширина коридоров в номере не менее 91 см', name: '', id: ''}, 
-      {checkboxTitle: 'Помощник для инвалидов', checkboxSubtitle: 'На 1 этаже вас встретит специалист и проводит до номера',name: '', id: '', checked: true}
+      {checkboxTitle: 'Широкий коридор', checkboxSubtitle: 'Ширина коридоров в номере не менее 91 см'}, 
+      {checkboxTitle: 'Помощник для инвалидов', checkboxSubtitle: 'На 1 этаже вас встретит специалист и проводит до номера', checked: true}
     ])
     

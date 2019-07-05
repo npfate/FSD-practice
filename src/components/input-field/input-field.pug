@@ -1,7 +1,32 @@
+//- {
+//-   opt: {
+//-     inputBlockClasses: string,
+//-     inputBlockLabelClasses: string,
+//-     id: string,
+//-     hint: string,
+//-     title: string,
+//-     inputFieldClasses: string,
+//-     inputFieldInputClasses: string,
+//-     inputType: string,
+//-     placeholder: string,
+//-     name: string,
+//-     id: string
+//-   },
+//-   dropdownList: {
+//-     key: value
+//-   },
+//-   mod: {
+//-     clear: boolean,
+//-     apply: boolean
+//-   }
+//- }
+
+
 - var inputField = 'input-field';
 - var inputBlock = 'input-block';
 
-
+include ../icons/icons.pug
+include ../dropdown/dropdown.pug
 
 mixin input-field(opt, dropdownList, mod)
  div(class= [inputBlock, opt.inputBlockClasses])
@@ -10,15 +35,12 @@ mixin input-field(opt, dropdownList, mod)
   
   if opt.title
     label(class=opt.inputBlockLabelClasses for=opt.id data-hint=opt.hint) #{opt.title}
-
       div(class= [inputField, opt.inputFieldClasses])
         if opt.type=='textfield'
           input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-        if opt.type=='dropdown'
-          include ../icons/icons.pug
+        if opt.type=='dropdown'          
           +icon({place: 'input', type: 'icons--dropdown', icon: 'expand_more'})
           input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
-          include ../dropdown/dropdown.pug
           +dropdown(dropdownList, mod)
         if opt.type=='date-dropdown'
           +icon({place: 'input', type: 'icons--dropdown', icon: 'expand_more'})

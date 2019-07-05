@@ -1,3 +1,13 @@
+//- {
+//-   dropdownList: {
+//-     key: value
+//-   },
+//-   mod: {
+//-     clear: boolean,
+//-     apply: boolean
+//-   }
+//- }
+
 include ../selector/selector.pug
 
 mixin dropdown(dropdownList, mod)
@@ -17,4 +27,4 @@ mixin dropdown(dropdownList, mod)
             if mod.clear
               input(class='dropdown__clear' type='reset' value='Очистить') 
             if mod.apply
-              button(class='dropdown__apply') Применить
+              input(class='dropdown__apply' type='submit' value='Применить')

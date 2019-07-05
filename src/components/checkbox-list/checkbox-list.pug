@@ -1,3 +1,19 @@
+//- { 
+//-   options: {
+//-     listClasses: string,
+//-     listTitle: string,
+//-     expandable: boolean
+//-   },
+//-   checkbox: {
+//-     checkboxTitle: string,
+//-     checkboxSubtitle: string,
+//-     checkboxId: string,
+//-     checkboxValue: string,
+//-     checkboxName: string,
+//-     checked: boolean
+//-   }
+//- }
+
 mixin checkbox-list(options, checkbox)
   if (typeof(options) !== null && typeof(checkbox) !== undefined)
     ul.checkbox-list(class= options.listClasses)
@@ -9,5 +25,5 @@ mixin checkbox-list(options, checkbox)
         else
           h3.checkbox-list__title #{options.listTitle}
       each val, index in checkbox
-        include ../checkbox/checkbox.pug
-        +checkbox()
+        include ../checkbox-item/checkbox-item.pug
+        +checkbox-item()

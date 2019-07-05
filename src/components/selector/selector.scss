@@ -6,7 +6,9 @@
   height: 30px;
   border: 1px solid $darkshade-25;
   border-radius: 50%;
+  color: $darkshade-50;
   font-size: 18px;
+  font-weight: 400;
   line-height: 22px;
   cursor: pointer;
   &--increment {
@@ -21,5 +23,6 @@
   }
   &--inactive {
     border-color: $darkshade-5;
+    color: $darkshade-5;
   }
 }
