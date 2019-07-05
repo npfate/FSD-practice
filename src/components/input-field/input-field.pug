@@ -10,19 +10,19 @@ mixin input-field(opt, dropdownList, mod)
   
   if opt.title
     label(class=opt.inputBlockLabelClasses for=opt.id data-hint=opt.hint) #{opt.title}
-  //- .inputfield(class!=attributes.class)
-  div(class= [inputField, opt.inputFieldClasses])
-    if opt.type=='textfield'
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-    if opt.type=='dropdown'
-      include ../icons/icons.pug
-      +icon({place: 'input',type: 'icons--dropdown', icon: 'expand_more'})
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
-      include ../dropdown/dropdown.pug
-      +dropdown(dropdownList, mod)
-    if opt.type=='date-dropdown'
-      +icon({place: 'input',type: 'icons--dropdown', icon: 'expand_more'})
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-    if opt.type=='subscribe'
-      +icon({place: 'input',type: ['icons--arrow', 'icons--purple'], icon: 'arrow_forward'})
-      input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+
+      div(class= [inputField, opt.inputFieldClasses])
+        if opt.type=='textfield'
+          input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+        if opt.type=='dropdown'
+          include ../icons/icons.pug
+          +icon({place: 'input', type: 'icons--dropdown', icon: 'expand_more'})
+          input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
+          include ../dropdown/dropdown.pug
+          +dropdown(dropdownList, mod)
+        if opt.type=='date-dropdown'
+          +icon({place: 'input', type: 'icons--dropdown', icon: 'expand_more'})
+          input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
+        if opt.type=='subscribe'
+          +icon({place: 'input', type: ['icons--subscribe'], icon: 'arrow_forward'})
+          input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)

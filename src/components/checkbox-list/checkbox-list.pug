@@ -1,8 +1,13 @@
 mixin checkbox-list(options, checkbox)
   if (typeof(options) !== null && typeof(checkbox) !== undefined)
-    if options.listTitle
-      h3.checkbox-list__title #{options.listTitle}
-    ul.checkbox-list      
+    ul.checkbox-list(class= options.listClasses)
+      if options.listTitle
+        if options.expandable
+          h3.checkbox-list__title(class='checkbox-list__title--expandable') #{options.listTitle}          
+            include ../icons/icons.pug
+            +icon({place: 'input', type: 'icons--expandable', icon: 'expand_more'})
+        else
+          h3.checkbox-list__title #{options.listTitle}
       each val, index in checkbox
         li.checkbox-item
           label(class=['checkbox-item__label'] for= val.checkboxId) #{val.checkboxTitle}

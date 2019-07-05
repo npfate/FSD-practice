@@ -92,7 +92,21 @@
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input']})
   +checkbox-list(
-    {listTitle: 'Checkbox Buttons'},
+    {listTitle: 'Checkbox Buttons', listClasses: ['col-xs'], expandable: true},
+    [
+      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
+      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
+      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+    ])    
+  +checkbox-list(
+    {listTitle: 'Checkbox Buttons', listClasses: ['col-xs']},
+    [
+      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
+      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
+      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+    ])
+  +checkbox-list(
+    {listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Можно курить', name: '', id: ''}, 
       {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},

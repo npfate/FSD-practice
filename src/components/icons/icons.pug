@@ -2,5 +2,4 @@
 
 mixin icon(opt)  
   if opt.place == input
-    .icons(class= ['icons--input'])
-      i(class= ['material-icons', opt.type]) #{opt.icon}
+    i(class= ['icons', opt.type, 'material-icons']) #{opt.icon}

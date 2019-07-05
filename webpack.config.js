@@ -92,7 +92,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // include: '',
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader'
@@ -100,7 +99,6 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // include: '',
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',

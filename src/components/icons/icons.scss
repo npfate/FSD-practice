@@ -1,22 +1,31 @@
 .icons {
-  &--input {
+  &--dropdown,
+  &--subscribe {
     position: absolute;
-    width: 44px;
-    height: 44px;
     top: 0;
     right: 0;
+    transform: translate(-10px, 10px);
+    &:hover {
+      cursor: pointer;
+    }
     &:hover~.input-field__input {
       border-color: $darkshade-50;
     }
   }
-  &--dropdown,
-  &--arrow {
-    transform: translate(10px, 10px);
+  &--subscribe {
+    color: $purple;
+  }
+  &--expandable {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-10px);
+    line-height: 15px;
     &:hover {
       cursor: pointer;
     }
   }
-  &--purple {
-    color: $purple;
+  &--expanded {
+    transform: translateX(-10px) rotate(-180deg);
   }
 }
