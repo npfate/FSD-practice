@@ -1,0 +1,9 @@
+.bullet-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  list-style-position: inside;
+  &__title {
+    margin-bottom: 13px;
+  }
+}

@@ -6,6 +6,7 @@
   //- Input types: textfield, dropdown, date-dropdown, subscribe
   //- Если type: dropdown, то передаем как минимум 3 аргумента
   include ../../components/checkbox-list/checkbox-list.pug
+  include ../../components/bullet-list/bullet-list.pug
   
   //- +input-field(
         {title: 'Text Field',
@@ -90,7 +91,7 @@
         inputBlockClasses: ['col-xs'],
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input']})
-  +checkbox-list(
+  //- +checkbox-list(
     {expandable: true, listTitle: 'Expandable Checkbox Buttons', listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Завтрак'}, 
@@ -102,7 +103,7 @@
       {checkboxTitle: 'Телевизор'}, 
       {checkboxTitle: 'Шампунь'}
     ])    
-  +checkbox-list(
+  //- +checkbox-list(
     {listTitle: 'Checkbox Buttons', listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Можно курить'}, 
@@ -121,5 +122,12 @@
     [
       {checkboxTitle: 'Широкий коридор', checkboxSubtitle: 'Ширина коридоров в номере не менее 91 см'}, 
       {checkboxTitle: 'Помощник для инвалидов', checkboxSubtitle: 'На 1 этаже вас встретит специалист и проводит до номера', checked: true}
+    ])
+  +bullet-list(
+    {listTitle: 'Bullet list', listClasses: ['col-xs']},
+    [
+      {bulletTitle: 'Нельзя с питомцами'},
+      {bulletTitle: 'Без вечеринок и мероприятий'},
+      {bulletTitle: 'Время прибытия — после 13:00, а выезд до 12:00'}
     ])
     

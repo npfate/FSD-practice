@@ -1,0 +1,9 @@
+mixin bullet-list(options, list)
+  if (typeof(options) !== null)
+    .bullets(class= options.listClasses)
+      if options.listTitle
+          h3.bullet-list__title #{options.listTitle}
+      ul.bullet-list      
+        each val, index in list
+          include ../bullet-item/bullet-item.pug
+          +bullet-item()
