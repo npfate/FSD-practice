@@ -8,7 +8,7 @@
   include ../../components/checkbox-list/checkbox-list.pug
   include ../../components/checkbox/checkbox.pug
   
-  +input-field(
+  //- +input-field(
         {title: 'Text Field',
         type: 'textfield',
         name: 'default',
@@ -20,7 +20,7 @@
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldClasses: [],
         inputFieldInputClasses: [inputfield + '__input']})
-  +input-field(
+  //- +input-field(
         {title: 'Text Field',
         type: 'textfield',
         name: 'hover-focus',
@@ -31,7 +31,7 @@
         inputBlockClasses: ['col-xs'],
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input']})
-  +input-field(
+  //- +input-field(
         {title: 'Masked Text Field',
         type: 'textfield',
         name: 'masked',
@@ -42,7 +42,7 @@
         inputBlockClasses: ['col-xs'],
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldInputClasses: [inputfield + '__input']})
-  +input-field(
+  //- +input-field(
         {title: 'Dropdown',
         type: 'dropdown',
         name: 'dropdown',
@@ -55,7 +55,7 @@
         inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
         {'Спальни': 0, 'Кровати': 0, 'Ванные комнаты': 0},
         {apply: true})
-  +input-field(
+  //- +input-field(
         {title: 'Date Dropdown', 
         type: 'date-dropdown',
         name: 'date-dropdown', 
@@ -67,7 +67,7 @@
         inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldClasses: [inputfield + '--date'],
         inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']})
-  +input-field(
+  //- +input-field(
         {title: 'Filter Date Dropdown', 
         type: 'dropdown',
         name: 'filter-date-dropdown', 
@@ -80,7 +80,7 @@
         inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
         {'Взрослые': 0, 'Дети': 0, 'Младенцы': 0},
         {clear: true, apply: true})
-  +input-field(
+  //- +input-field(
         {title: 'Subscription text field', 
         type: 'subscribe',
         name: 'subscription-text-field', 
@@ -111,5 +111,11 @@
       {checkboxTitle: 'Можно курить', name: '', id: ''}, 
       {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
       {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+    ])
+  +checkbox-list(
+    {listTitle: 'Rich Checkbox Buttons', listClasses: ['col-xs']},
+    [
+      {checkboxTitle: 'Широкий коридор', checkboxSubtitle: 'Ширина коридоров в номере не менее 91 см', name: '', id: ''}, 
+      {checkboxTitle: 'Помощник для инвалидов', checkboxSubtitle: 'На 1 этаже вас встретит специалист и проводит до номера',name: '', id: '', checked: true}
     ])
     

@@ -9,10 +9,5 @@ mixin checkbox-list(options, checkbox)
         else
           h3.checkbox-list__title #{options.listTitle}
       each val, index in checkbox
-        li.checkbox-item
-          label(class=['checkbox-item__label'] for= val.checkboxId) #{val.checkboxTitle}
-            if (val.checked)
-              input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName checked)
-            else  
-              input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName)
-            span(class='checkbox-item__checkmark') 
+        include ../checkbox/checkbox.pug
+        +checkbox()

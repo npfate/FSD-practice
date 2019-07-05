@@ -1,5 +1,14 @@
 mixin checkbox(options)
   if (typeof(options) !== null)
     li.checkbox-item
-      label(class=['checkbox__label']) #{options.title}
-        input(type='checkbox' class= ['checkbox__input'])
+      if (val.checkboxSubtitle)
+        label(class=['checkbox-item__label', 'checkbox-item__label--rich'] for= val.checkboxId) 
+          input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName checked=val.checked)
+          span(class=['checkbox-item__title', 'checkbox-item__title--rich']) #{val.checkboxTitle}
+          span(class='checkbox-item__subtitle') #{val.checkboxSubtitle}
+          span(class='checkbox-item__checkmark')
+      else
+        label(class=['checkbox-item__label'] for= val.checkboxId)
+          input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName checked=val.checked)
+          span(class='checkbox-item__title') #{val.checkboxTitle}
+          span(class='checkbox-item__checkmark')
