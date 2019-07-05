@@ -1,5 +1,5 @@
-- var inputfield = "input-field";
-- var inputblock = "input-block"
+- var inputfield = 'input-field';
+- var inputblock = 'input-block'
 
 .wrapper-1
   include ../../components/input-field/input-field.pug
@@ -9,89 +9,93 @@
   include ../../components/checkbox/checkbox.pug
   
   +input-field(
-        {title: "Text Field",
-        type: "textfield",
-        name: "default",
-        id: "textfield-default",
-        hint: "Default",
-        inputType: "email",
-        placeholder: "Email",
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
+        {title: 'Text Field',
+        type: 'textfield',
+        name: 'default',
+        id: 'textfield-default',
+        hint: 'Default',
+        inputType: 'email',
+        placeholder: 'Email',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
         inputFieldClasses: [],
-        inputFieldInputClasses: [inputfield + "__input"]})
+        inputFieldInputClasses: [inputfield + '__input']})
   +input-field(
-        {title: "Text Field",
-        type: "textfield",
-        name: "hover-focus",
-        id: "textfield-hover-focus",
-        hint: "hover / focus",
-        inputType: "email",
-        placeholder: "This is pretty awesome",
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldInputClasses: [inputfield + "__input"]})
+        {title: 'Text Field',
+        type: 'textfield',
+        name: 'hover-focus',
+        id: 'textfield-hover-focus',
+        hint: 'hover / focus',
+        inputType: 'email',
+        placeholder: 'This is pretty awesome',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input']})
   +input-field(
-        {title: "Masked Text Field",
-        type: "textfield",
-        name: "masked",
-        id: "textfield-masked",
-        hint: "Default",
-        inputType: "email",
-        placeholder: "ДД.ММ.ГГГГ",
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldInputClasses: [inputfield + "__input"]})
+        {title: 'Masked Text Field',
+        type: 'textfield',
+        name: 'masked',
+        id: 'textfield-masked',
+        hint: 'Default',
+        inputType: 'email',
+        placeholder: 'ДД.ММ.ГГГГ',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input']})
   +input-field(
-        {title: "Dropdown",
-        type: "dropdown",
-        name: "dropdown",
-        id: "dropdown-default",
-        hint: "Default",
-        inputType: "text",
-        placeholder: "Сколько гостей",
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
-        {"Спальни": 0, "Кровати": 0, "Ванные комнаты": 0},
+        {title: 'Dropdown',
+        type: 'dropdown',
+        name: 'dropdown',
+        id: 'dropdown-default',
+        hint: 'Default',
+        inputType: 'text',
+        placeholder: 'Сколько гостей',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
+        {'Спальни': 0, 'Кровати': 0, 'Ванные комнаты': 0},
         {apply: true})
   +input-field(
-        {title: "Date Dropdown", 
-        type: "date-dropdown",
-        name: "date-dropdown", 
-        id: "date-dropdown", 
-        hint: "",
-        inputType: "text",
-        placeholder: "ДД.ММ.ГГГГ",
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldClasses: [inputfield + "--date"],
-        inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]})
+        {title: 'Date Dropdown', 
+        type: 'date-dropdown',
+        name: 'date-dropdown', 
+        id: 'date-dropdown', 
+        hint: '',
+        inputType: 'text',
+        placeholder: 'ДД.ММ.ГГГГ',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldClasses: [inputfield + '--date'],
+        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']})
   +input-field(
-        {title: "Filter Date Dropdown", 
-        type: "dropdown",
-        name: "filter-date-dropdown", 
-        id: "filter-date-dropdown", 
-        hint: "",
-        inputType: "text", 
-        placeholder: "19 авг - 23 авг", 
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldInputClasses: [inputfield + "__input", inputfield + "__input--dropdown"]},
-        {"Взрослые": 0, "Дети": 0, "Младенцы": 0},
+        {title: 'Filter Date Dropdown', 
+        type: 'dropdown',
+        name: 'filter-date-dropdown', 
+        id: 'filter-date-dropdown', 
+        hint: '',
+        inputType: 'text', 
+        placeholder: '19 авг - 23 авг', 
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
+        {'Взрослые': 0, 'Дети': 0, 'Младенцы': 0},
         {clear: true, apply: true})
   +input-field(
-        {title: "Subscription text field", 
-        type: "subscribe",
-        name: "subscription-text-field", 
-        id: "subscription-text-field", 
-        hint: "",
-        inputType: "text", 
-        placeholder: "Email", 
-        inputBlockClasses: ["col-xs"],
-        inputBlockLabelClasses: [inputblock + "__label"],
-        inputFieldInputClasses: [inputfield + "__input"]})
-  +checkbox-list({listTitle: "Checkbox Buttons"})
-    +checkbox({checkboxTitle: "Можно курить",
-              checkboxId: "chb-smokable",
-              checkboxName: "chb-smokable"})
+        {title: 'Subscription text field', 
+        type: 'subscribe',
+        name: 'subscription-text-field', 
+        id: 'subscription-text-field', 
+        hint: '',
+        inputType: 'text', 
+        placeholder: 'Email', 
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input']})
+  +checkbox-list(
+    {listTitle: 'Checkbox Buttons'},
+    [
+      {checkboxTitle: 'Можно курить', name: '', id: ''}, 
+      {checkboxTitle: 'Можно с питомцами', name: '', id: '', checked: true},
+      {checkboxTitle: 'Можно пригласить гостей (до 10 человек)', name: '', id: ''}
+    ])
+    

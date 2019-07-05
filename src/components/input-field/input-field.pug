@@ -1,26 +1,28 @@
-- var inputField = "input-field";
-- var inputBlock = "input-block";
+- var inputField = 'input-field';
+- var inputBlock = 'input-block';
 
 
 
 mixin input-field(opt, dropdownList, mod)
  div(class= [inputBlock, opt.inputBlockClasses])
-  //- If there has to be a label then call it by ˝title: ""˝
+  
+  //- Если есть заголовок, то вызываем его в объекте с помощью ˝title: ''˝
+  
   if opt.title
     label(class=opt.inputBlockLabelClasses for=opt.id data-hint=opt.hint) #{opt.title}
   //- .inputfield(class!=attributes.class)
   div(class= [inputField, opt.inputFieldClasses])
-    if opt.type=="textfield"
+    if opt.type=='textfield'
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-    if opt.type=="dropdown"
+    if opt.type=='dropdown'
       include ../icons/icons.pug
-      +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
+      +icon({place: 'input',type: 'icons--dropdown', icon: 'expand_more'})
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id data-toggle=opt.type)
       include ../dropdown/dropdown.pug
       +dropdown(dropdownList, mod)
-    if opt.type=="date-dropdown"
-      +icon({place: "input",type: "icons--dropdown", icon: "expand_more"})
+    if opt.type=='date-dropdown'
+      +icon({place: 'input',type: 'icons--dropdown', icon: 'expand_more'})
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)
-    if opt.type=="subscribe"
-      +icon({place: "input",type: ["icons--arrow", "icons--purple"], icon: "arrow_forward"})
+    if opt.type=='subscribe'
+      +icon({place: 'input',type: ['icons--arrow', 'icons--purple'], icon: 'arrow_forward'})
       input(class=opt.inputFieldInputClasses type=opt.inputType placeholder=opt.placeholder name=opt.name id=opt.id)

@@ -1,11 +1,13 @@
-mixin checkbox-list(options, ...checkboxList)
-  if (typeof(options) !== null && typeof(options) !== undefined)
+mixin checkbox-list(options, checkbox)
+  if (typeof(options) !== null && typeof(checkbox) !== undefined)
     if options.listTitle
       h3.checkbox-list__title #{options.listTitle}
-    ul.checkbox-list
-      //- if (typeof(checkboxList) !== null && typeof(checkboxList) !== undefined)
-        //- - var list = checkboxList;
-        //- each item, index in list
-          //- li.checkbox-item
-      //- label(class=["as", options.labelClasses] for= checkboxList.checkboxId) #{checkboxList.checkboxTitle}
-      //- input(type="checkbox" class= ["as", options.checkboxClasses] id= checkboxList.checkboxId name= checkboxList.checkboxName)
+    ul.checkbox-list      
+      each val, index in checkbox
+        li.checkbox-item
+          label(class=['checkbox-item__label'] for= val.checkboxId) #{val.checkboxTitle}
+            if (val.checked)
+              input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName checked)
+            else  
+              input(type='checkbox' class= ['checkbox-item__input'] value= val.checkboxValue id= val.checkboxId name= val.checkboxName)
+            span(class='checkbox-item__checkmark') 

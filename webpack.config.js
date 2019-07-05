@@ -38,42 +38,34 @@ module.exports = {
   module: {
     rules: [{
         test: /\.pug$/,
+        // use: [{
+        //   loader: 'pug-loader',
+        //   options: {
+        //     pretty: true
+        //   }
+        // }]
         use: [{
-          loader: 'pug-loader',
-          options: {
-            pretty: true
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'link:href']
+            },
+          },
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: true,
+              globals: ['require']
+            }
           }
-        }]
-      },
-      {
-        test: /\.js$/,
-        exclude: [/node_modules/],
-        use: [{
-          loader: 'babel-loader'
-        }]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
         ]
       },
       {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpe?g|gif|ico)$/,
         use: [{
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'images',
+              outputPath: 'images/',
               useRelativePath: true
             }
           },
@@ -86,9 +78,33 @@ module.exports = {
                 progressive: true,
                 quality: 90
               },
-              diasble: true
+              diasble: false
             }
           }
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader'
+        }]
+      },
+      {
+        test: /\.css$/,
+        // include: '',
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        // include: '',
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
         ]
       },
       {

@@ -1,20 +1,20 @@
 include ../selector/selector.pug
 
 mixin dropdown(dropdownList, mod)
-  if (typeof(dropdownList) !== "undefined")
+  if (typeof(dropdownList) !== 'undefined')
     ul.dropdown
       - var list = dropdownList;
       each item, index in list
         li.dropdown__item
           span.dropdown__title= index        
           .dropdown__choose
-            +selector({classes: ["selector--decrement"]})
+            +selector({classes: ['selector--decrement']})
             span.dropdown__value= item
-            +selector({classes: ["selector--increment"]})
-      if (typeof(mod) !== "undefined")
+            +selector({classes: ['selector--increment']})
+      if (typeof(mod) !== 'undefined')
         if mod.clear || mod.apply
-          li(class= ["dropdown__item"])
+          li(class= ['dropdown__item'])
             if mod.clear
-              input(class="dropdown__clear" type="reset" value="Очистить") 
+              input(class='dropdown__clear' type='reset' value='Очистить') 
             if mod.apply
-              button(class="dropdown__apply") Применить
+              button(class='dropdown__apply') Применить
