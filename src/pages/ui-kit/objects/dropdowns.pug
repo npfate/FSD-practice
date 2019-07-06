@@ -1,0 +1,99 @@
+- var inputfield = 'input-field';
+- var inputblock = 'input-block';
+
+-
+  var dropdown_default = {
+    opt: {
+      title: 'Dropdown',
+      type: 'dropdown',
+      name: 'dropdown',
+      id: 'dropdown-default',
+      hint: 'Default',
+      inputType: 'text',
+      placeholder: 'Сколько гостей',
+      inputBlockClasses: ['col-xs'],
+      inputBlockLabelClasses: [inputblock + '__label'],
+      inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']
+    },
+    dropdownList: {
+      'Спальни': 2, 
+      'Кровати': 2, 
+      'Ванные комнаты': 0
+    },
+    mod: {
+      apply: true
+    }
+  }
+
+-
+  var dropdown_date = {
+    title: 'Date Dropdown', 
+    type: 'date-dropdown',
+    name: 'date-dropdown', 
+    id: 'date-dropdown', 
+    hint: '',
+    inputType: 'text',
+    placeholder: 'ДД.ММ.ГГГГ',
+    inputBlockClasses: ['col-xs'],
+    inputBlockLabelClasses: [inputblock + '__label'],
+    inputFieldClasses: [inputfield + '--date'],
+    inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']
+    }
+
+-
+  var dropdown_filter = {
+    opt: {
+      title: 'Filter Date Dropdown', 
+      type: 'dropdown',
+      name: 'filter-date-dropdown', 
+      id: 'filter-date-dropdown', 
+      hint: '',
+      inputType: 'text', 
+      placeholder: '19 авг - 23 авг', 
+      inputBlockClasses: ['col-xs'],
+      inputBlockLabelClasses: [inputblock + '__label'],
+      inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']
+    },
+    dropdownList: {
+      'Взрослые': 0, 
+      'Дети': 0, 
+      'Младенцы': 0
+    },
+    mod: {
+      clear: true, 
+      apply: true
+    }
+  }
+
+//- -
+  var dropdowns = {
+    dropdown_default: 
+      [{
+        title: 'Dropdown',
+        type: 'dropdown',
+        name: 'dropdown',
+        id: 'dropdown-default',
+        hint: 'Default',
+        inputType: 'text',
+        placeholder: 'Сколько гостей',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']
+      },
+      {'Спальни': 2, 'Кровати': 2, 'Ванные комнаты': 0},
+      {apply: true}
+      ],
+    dropdown_date: {
+        title: 'Date Dropdown', 
+        type: 'date-dropdown',
+        name: 'date-dropdown', 
+        id: 'date-dropdown', 
+        hint: '',
+        inputType: 'text',
+        placeholder: 'ДД.ММ.ГГГГ',
+        inputBlockClasses: ['col-xs'],
+        inputBlockLabelClasses: [inputblock + '__label'],
+        inputFieldClasses: [inputfield + '--date'],
+        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']
+      }
+  }

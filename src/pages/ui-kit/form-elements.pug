@@ -1,5 +1,11 @@
 - var inputfield = 'input-field';
-- var inputblock = 'input-block'
+- var inputblock = 'input-block';
+-
+  var iterate = function(array){    
+    for (var i = 0; i < array.length; i++){
+      console.log(i);
+    }    
+  };
 
 .wrapper-1
   include ../../components/input-field/input-field.pug
@@ -9,91 +15,19 @@
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/radio-list/radio-list.pug
   
-  //- +input-field(
-        {title: 'Text Field',
-        type: 'textfield',
-        name: 'default',
-        id: 'textfield-default',
-        hint: 'Default',
-        inputType: 'email',
-        placeholder: 'Email',
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldClasses: [],
-        inputFieldInputClasses: [inputfield + '__input']})
-  //- +input-field(
-        {title: 'Text Field',
-        type: 'textfield',
-        name: 'hover-focus',
-        id: 'textfield-hover-focus',
-        hint: 'hover / focus',
-        inputType: 'email',
-        placeholder: 'This is pretty awesome',
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldInputClasses: [inputfield + '__input']})
-  //- +input-field(
-        {title: 'Masked Text Field',
-        type: 'textfield',
-        name: 'masked',
-        id: 'textfield-masked',
-        hint: 'Default',
-        inputType: 'email',
-        placeholder: 'ДД.ММ.ГГГГ',
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldInputClasses: [inputfield + '__input']})
-  //- +input-field(
-        {title: 'Dropdown',
-        type: 'dropdown',
-        name: 'dropdown',
-        id: 'dropdown-default',
-        hint: 'Default',
-        inputType: 'text',
-        placeholder: 'Сколько гостей',
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
-        {'Спальни': 2, 'Кровати': 2, 'Ванные комнаты': 0},
-        {apply: true})
-  //- +input-field(
-        {title: 'Date Dropdown', 
-        type: 'date-dropdown',
-        name: 'date-dropdown', 
-        id: 'date-dropdown', 
-        hint: '',
-        inputType: 'text',
-        placeholder: 'ДД.ММ.ГГГГ',
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldClasses: [inputfield + '--date'],
-        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']})
-  //- +input-field(
-        {title: 'Filter Date Dropdown', 
-        type: 'dropdown',
-        name: 'filter-date-dropdown', 
-        id: 'filter-date-dropdown', 
-        hint: '',
-        inputType: 'text', 
-        placeholder: '19 авг - 23 авг', 
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldInputClasses: [inputfield + '__input', inputfield + '__input--dropdown']},
-        {'Взрослые': 0, 'Дети': 0, 'Младенцы': 0},
-        {clear: true, apply: true})
-  //- +input-field(
-        {title: 'Subscription text field', 
-        type: 'subscribe',
-        name: 'subscription-text-field', 
-        id: 'subscription-text-field', 
-        hint: '',
-        inputType: 'email', 
-        placeholder: 'Email', 
-        inputBlockClasses: ['col-xs'],
-        inputBlockLabelClasses: [inputblock + '__label'],
-        inputFieldInputClasses: [inputfield + '__input']})
+  include ./objects/textfields.pug
+  include ./objects/dropdowns.pug
+  include ./objects/subscribe.pug
+
+  +input-field(textfields.textfield_default)
+  +input-field(textfields.textfield_hover)
+  +input-field(textfields.textfield_masked)
+  +input-field(dropdown_default.opt, dropdown_default.dropdownList, dropdown_default.mod)
+  +input-field(dropdown_date)
+  +input-field(dropdown_filter.opt, dropdown_filter.dropdownList, dropdown_filter.mod)
+  +input-field(subscribe)
   //- +checkbox-list(
-    {expandable: true, listTitle: 'Expandable Checkbox Buttons', listClasses: ['col-xs']},
+    {expandable: true, listTitle: 'Expandable Checkbox List', listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Завтрак'}, 
       {checkboxTitle: 'Письменный стол', checked: true},
@@ -111,34 +45,34 @@
       {checkboxTitle: 'Можно с питомцами', checked: true},
       {checkboxTitle: 'Можно пригласить гостей (до 10 человек)'}
     ])
-  +checkbox-list(
+  //- +checkbox-list(
     {listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Можно курить'}, 
       {checkboxTitle: 'Можно с питомцами', checked: true},
       {checkboxTitle: 'Можно пригласить гостей (до 10 человек)'}
     ])
-  +checkbox-list(
+  //- +checkbox-list(
     {listTitle: 'Rich Checkbox Buttons', listClasses: ['col-xs']},
     [
       {checkboxTitle: 'Широкий коридор', checkboxSubtitle: 'Ширина коридоров в номере не менее 91 см'}, 
       {checkboxTitle: 'Помощник для инвалидов', checkboxSubtitle: 'На 1 этаже вас встретит специалист и проводит до номера', checked: true}
     ])
-  +bullet-list(
+  //- +bullet-list(
     {listTitle: 'Bullet list', listClasses: ['col-xs']},
     [
       {bulletTitle: 'Нельзя с питомцами'},
       {bulletTitle: 'Без вечеринок и мероприятий'},
       {bulletTitle: 'Время прибытия — после 13:00, а выезд до 12:00'}
     ])
-  +radio-list(
+  //- +radio-list(
     {listTitle: 'Radio buttons', listClasses: ['col-xs']},
     [
       {radioTitle: 'Мужчина', radioValue: 'male' , radioName: 'sex', checked: true},
       {radioTitle: 'Женщина', radioValue: 'female' , radioName: 'sex'}
     ])
   include ../../components/toggle/toggle.pug
-  +toggle(
+  //- +toggle(
     {},
     {toggleTitle: 'Получать спецпредложения',
     toggleId: 'special',
@@ -146,7 +80,7 @@
     toggleName: 'special',
     checked: true
     })
-  +toggle(
+  //- +toggle(
     {},
     {toggleTitle: 'Получать спецпредложения',
     toggleId: 'special-1',

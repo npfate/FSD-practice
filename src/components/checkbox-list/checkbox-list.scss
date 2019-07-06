@@ -4,9 +4,11 @@
   list-style: none;
   &__title {
     position: relative;
-    margin: 15px 0 18px;
+    margin: 15px 0 17px;
+    @include title-h3;
     &--expandable {
       padding-right: 44px;
+      margin-bottom: 19px;
       // &::after {
       //   content: "";
       //   cursor: pointer;

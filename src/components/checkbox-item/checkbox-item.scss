@@ -8,7 +8,7 @@ $checkbox-size: 20px;
   &__label {
     position: relative;
     color: $darkshade-50;
-    line-height: 18px;
+    line-height: 20px;
     padding-left: $checkbox-size + 10px;
     &:hover {
       cursor: pointer;
@@ -27,7 +27,7 @@ $checkbox-size: 20px;
   }
   &__title {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     &--rich {
       font-weight: 700;
       color: $darkshade-75;
@@ -35,13 +35,13 @@ $checkbox-size: 20px;
   }
   &__subtitle {
     font-size: 12px;
-    line-height: 15px;
+    line-height: 14px;
     display: block;
-    margin-top: 5px;
+    margin-top: 6px;
   }
   &__checkmark {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: $checkbox-size;
     height: $checkbox-size;

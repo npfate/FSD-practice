@@ -13,8 +13,7 @@ include ../selector/selector.pug
 mixin dropdown(dropdownList, mod)
   if (typeof(dropdownList) !== 'undefined')
     ul.dropdown
-      - var list = dropdownList;
-      each item, index in list
+      each item, index in dropdownList
         li.dropdown__item
           span.dropdown__title= index        
           .dropdown__choose

@@ -1,0 +1,43 @@
+- var inputfield = 'input-field';
+- var inputblock = 'input-block';
+
+-
+  var textfields = {
+    textfield_default: {
+      title: 'Text Field',
+      type: 'textfield',
+      name: 'default',
+      id: 'textfield-default',
+      hint: 'Default',
+      inputType: 'email',
+      placeholder: 'Email',
+      inputBlockClasses: ['col-xs'],
+      inputBlockLabelClasses: [inputblock + '__label'],
+      inputFieldClasses: [],
+      inputFieldInputClasses: [inputfield + '__input']
+    },
+    textfield_hover: {
+      title: 'Text Field',
+      type: 'textfield',
+      name: 'hover-focus',
+      id: 'textfield-hover-focus',
+      hint: 'hover / focus',
+      inputType: 'email',
+      placeholder: 'This is pretty awesome',
+      inputBlockClasses: ['col-xs'],
+      inputBlockLabelClasses: [inputblock + '__label'],
+      inputFieldInputClasses: [inputfield + '__input']
+    },
+    textfield_masked: {
+      title: 'Masked Text Field',
+      type: 'textfield',
+      name: 'masked',
+      id: 'textfield-masked',
+      hint: 'Default',
+      inputType: 'email',
+      placeholder: 'ДД.ММ.ГГГГ',
+      inputBlockClasses: ['col-xs'],
+      inputBlockLabelClasses: [inputblock + '__label'],
+      inputFieldInputClasses: [inputfield + '__input']
+    }
+  }
