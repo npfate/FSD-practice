@@ -1,0 +1,9 @@
+mixin radio-list(options, list)
+  if (typeof(options) !== null)
+    .radio(class= options.listClasses)
+      if options.listTitle
+          h3.radio-list__title #{options.listTitle}
+      ul.radio-list      
+        each val, index in list
+          include ../radio-btn/radio-btn.pug
+          +radio-btn()

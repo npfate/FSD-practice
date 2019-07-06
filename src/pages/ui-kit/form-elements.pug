@@ -7,6 +7,7 @@
   //- Если type: dropdown, то передаем как минимум 3 аргумента
   include ../../components/checkbox-list/checkbox-list.pug
   include ../../components/bullet-list/bullet-list.pug
+  include ../../components/radio-list/radio-list.pug
   
   //- +input-field(
         {title: 'Text Field',
@@ -130,4 +131,10 @@
       {bulletTitle: 'Без вечеринок и мероприятий'},
       {bulletTitle: 'Время прибытия — после 13:00, а выезд до 12:00'}
     ])
-    
+  +radio-list(
+    {listTitle: 'Radio buttons', listClasses: ['col-xs']},
+    [
+      {radioTitle: 'Мужчина', radioValue: 'male' , radioName: 'sex', checked: true},
+      {radioTitle: 'Женщина', radioValue: 'female' , radioName: 'sex'}
+    ]
+  )

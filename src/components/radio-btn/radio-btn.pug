@@ -1,0 +1,7 @@
+mixin radio-btn(options)
+  if (typeof(options) !== null && typeof(val) !== null)
+    li.radio-btn
+      label(class=['radio-btn__label'] for= val.radioId)
+        input(type='radio' class= ['radio-btn__input'] value= val.radioValue id= val.radioId name= val.radioName checked=val.checked)
+        span(class='radio-btn__checkmark')
+        span(class='radio-btn__title') #{val.radioTitle}
