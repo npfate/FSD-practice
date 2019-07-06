@@ -6,8 +6,9 @@ $images-path: 'misc/images/';
   box-sizing: border-box;
 }
 
-@import 'styles/colors';
 @import 'misc/fonts';
+@import 'styles/colors';
+@import 'styles/common';
 @import '~material-icons/iconfont/material-icons.scss';
 @import 'styles/columns';
 @import 'pages/ui-kit/ui-kit.scss';

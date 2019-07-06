@@ -2,95 +2,54 @@ $fonts-path: './misc/fonts';
 @import '../styles/colors';
 @font-face {
   font-family: 'Montserrat';
-  src: url('#{$fonts-path}/Montserrat-Bold.woff') format('woff');
+  src: url('#{$fonts-path}/Montserrat-Bold.woff') format('woff'),
+  url('#{$fonts-path}/Montserrat-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}/Montserrat-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('#{$fonts-path}/Montserrat-Regular.woff') format('woff');
+  src: url('#{$fonts-path}/Montserrat-Regular.woff') format('woff'),
+  url('#{$fonts-path}/Montserrat-Regular.ttf') format('truetype'),
+  url('#{$fonts-path}/Montserrat-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('#{$fonts-path}/Quicksand-Bold.woff') format('woff');
+  src: url('#{$fonts-path}/Quicksand-Bold.woff') format('woff'),
+  url('#{$fonts-path}/Quicksand-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}/Quicksand-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('#{$fonts-path}/Quicksand-Regular.woff') format('woff');
+  src: url('#{$fonts-path}/Quicksand-Regular.woff') format('woff'),
+  url('#{$fonts-path}/Quicksand-Regular.ttf') format('truetype'),
+  url('#{$fonts-path}/Quicksand-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
-body {
-  font-family: Montserrat;
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans-Bold.woff') format('woff'),
+  url('#{$fonts-path}/OpenSans-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}/OpenSans-Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans-Regular.woff') format('woff'),
+  url('#{$fonts-path}/OpenSans-Regular.ttf') format('truetype'),
+  url('#{$fonts-path}/OpenSans-Regular.svg') format('svg');
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: $darkshade-75;
-}
-
-@mixin title-h1 {
-  font: {
-    family: Quicksand;
-    weight: 700;
-    size: 24px;
-  }
-  line-height: 30px;
-  color: $darkshade-100;
-}
-
-@mixin title-h2 {
-  font: {
-    family: Quicksand;
-    weight: 700;
-    size: 19px;
-  }
-  line-height: 24px;
-  color: $darkshade-100;
-}
-
-@mixin title-h3 {
-  font: {
-    family: Montserrat;
-    weight: 700;
-    size: 12px;
-  }
-  text-transform: uppercase;
-  line-height: 15px;
-  color: $darkshade-100;
-}
-
-h1,
-.title-h1 {
-  font-family: Quicksand;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: $darkshade-100;
-}
-
-h2,
-.title-h2 {
-  font-family: Quicksand;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-  color: $darkshade-100;
-}
-
-h3,
-.title-h3 {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $darkshade-100;
+  font-style: normal;
 }
