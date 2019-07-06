@@ -136,5 +136,20 @@
     [
       {radioTitle: 'Мужчина', radioValue: 'male' , radioName: 'sex', checked: true},
       {radioTitle: 'Женщина', radioValue: 'female' , radioName: 'sex'}
-    ]
-  )
+    ])
+  include ../../components/toggle/toggle.pug
+  +toggle(
+    {},
+    {toggleTitle: 'Получать спецпредложения',
+    toggleId: 'special',
+    toggleValue: 'special',
+    toggleName: 'special',
+    checked: true
+    })
+  +toggle(
+    {},
+    {toggleTitle: 'Получать спецпредложения',
+    toggleId: 'special-1',
+    toggleValue: 'special-1',
+    toggleName: 'special-1'
+    })
