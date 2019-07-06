@@ -1,0 +1,23 @@
+//- {
+//-   options: {
+//-     listClasses: [],
+//-     listTitle: string
+//-   },
+//-   list: {
+//-     toggleId: string,
+//-     toggleValue: string,
+//-     toggleName: string,
+//-     toggleTitle: string,
+//-     checked: boolean
+//-   }
+//- }
+
+mixin toggle-list(options, list)
+  if (typeof(options) !== null)
+    .toggle(class= options.listClasses)
+      if options.listTitle
+          h3.toggle-list__title #{options.listTitle}
+      ul.toggle-list      
+        each val, index in list
+          include ../toggle-item/toggle-item.pug
+          +toggle-item()

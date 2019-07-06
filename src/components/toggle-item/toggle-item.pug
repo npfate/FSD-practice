@@ -1,0 +1,21 @@
+//- {
+//-   options: {
+//-     listClasses: [],
+//-     listTitle: string
+//-   },
+//-   val: {
+//-     toggleId: string,
+//-     toggleValue: string,
+//-     toggleName: string,
+//-     toggleTitle: string,
+//-     checked: boolean
+//-   }
+//- }
+
+mixin toggle-item(options)
+  if (typeof(options) !== null && typeof(val) !== null)
+    li.toggle-item
+      label(class=['toggle-item__label'] for= val.toggleId)
+        input(type='checkbox' class= ['toggle-item__input'] value= val.toggleValue id= val.toggleId name= val.toggleName checked=val.checked)
+        span(class= ['toggle-item__slider', 'toggle-item__slider--rounded'])
+        span(class='toggle-item__title') #{val.toggleTitle}

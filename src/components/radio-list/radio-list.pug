@@ -1,3 +1,17 @@
+//- {
+//-   options: {
+//-     listClasses: [],
+//-     listTitle: string
+//-   },
+//-   list: {
+//-     radioId: string,
+//-     radioValue: string,
+//-     radioName: string,
+//-     radioTitle: string,
+//-     checked: boolean
+//-   }
+//- }
+
 mixin radio-list(options, list)
   if (typeof(options) !== null)
     .radio(class= options.listClasses)

@@ -1,7 +1,7 @@
 $toggle-size: 20px;
-.toggle {
+.toggle-item {
   display: flex;
-  margin-top: 10px;
+  margin-top: 16px;
   &:first-child {
     margin-top: 0;
   }
@@ -13,6 +13,9 @@ $toggle-size: 20px;
     &:hover {
       cursor: pointer;
     }
+    &::first-child {
+      margin-top: 0;
+    }
   }
   &__input {
     position: absolute;
@@ -20,10 +23,10 @@ $toggle-size: 20px;
     cursor: pointer;
     height: 0;
     width: 0;
-    &:checked~.toggle__slider {
+    &:checked~.toggle-item__slider {
       border-color: $purple;
     }
-    &:checked~.toggle__slider::after {
+    &:checked~.toggle-item__slider::after {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       transform: translateX(23px);
     }

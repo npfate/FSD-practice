@@ -30,9 +30,6 @@ include ../dropdown/dropdown.pug
 
 mixin input-field(opt, dropdownList, mod)
  div(class= [inputBlock, opt.inputBlockClasses])
-  
-  //- Если есть заголовок, то вызываем его в объекте с помощью ˝title: ''˝
-  
   if opt.title
     label(class=opt.inputBlockLabelClasses for=opt.id data-hint=opt.hint) #{opt.title}
       div(class= [inputField, opt.inputFieldClasses])

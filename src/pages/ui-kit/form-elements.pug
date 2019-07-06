@@ -14,18 +14,19 @@
   include ../../components/checkbox-list/checkbox-list.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/radio-list/radio-list.pug
+  include ../../components/toggle-list/toggle-list.pug
   
   include ./objects/textfields.pug
   include ./objects/dropdowns.pug
   include ./objects/subscribe.pug
 
-  +input-field(textfields.textfield_default)
-  +input-field(textfields.textfield_hover)
-  +input-field(textfields.textfield_masked)
-  +input-field(dropdown_default.opt, dropdown_default.dropdownList, dropdown_default.mod)
-  +input-field(dropdown_date)
-  +input-field(dropdown_filter.opt, dropdown_filter.dropdownList, dropdown_filter.mod)
-  +input-field(subscribe)
+  //- +input-field(textfields.textfield_default)
+  //- +input-field(textfields.textfield_hover)
+  //- +input-field(textfields.textfield_masked)
+  //- +input-field(dropdown_default.opt, dropdown_default.dropdownList, dropdown_default.mod)
+  //- +input-field(dropdown_date)
+  //- +input-field(dropdown_filter.opt, dropdown_filter.dropdownList, dropdown_filter.mod)
+  //- +input-field(subscribe)
   //- +checkbox-list(
     {expandable: true, listTitle: 'Expandable Checkbox List', listClasses: ['col-xs']},
     [
@@ -71,19 +72,19 @@
       {radioTitle: 'Мужчина', radioValue: 'male' , radioName: 'sex', checked: true},
       {radioTitle: 'Женщина', radioValue: 'female' , radioName: 'sex'}
     ])
-  include ../../components/toggle/toggle.pug
-  //- +toggle(
-    {},
-    {toggleTitle: 'Получать спецпредложения',
-    toggleId: 'special',
-    toggleValue: 'special',
-    toggleName: 'special',
-    checked: true
-    })
-  //- +toggle(
-    {},
-    {toggleTitle: 'Получать спецпредложения',
-    toggleId: 'special-1',
-    toggleValue: 'special-1',
-    toggleName: 'special-1'
-    })
+  
+  +toggle-list(
+    {listTitle: 'Toggle', listClasses: ['col-xs']},
+    [
+      {toggleTitle: 'Получать спецпредложения',
+      toggleId: 'special',
+      toggleValue: 'special',
+      toggleName: 'special',
+      checked: true
+      },
+      {toggleTitle: 'Получать спецпредложения',
+      toggleId: 'special-1',
+      toggleValue: 'special-1',
+      toggleName: 'special-1'
+      }
+    ])
